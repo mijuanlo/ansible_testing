@@ -28,4 +28,4 @@
     dest: "/tmp/es_asi"
     content: |
       jaja
-  when: (centro is defined) and (tipo is defined) and (centro = "numero15" )
+  when: (centro is defined) and (tipo is defined) and (centro == 'numero15') and (tipo == 'secundaria')
