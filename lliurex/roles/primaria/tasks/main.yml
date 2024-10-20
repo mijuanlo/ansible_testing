@@ -33,8 +33,7 @@
 - name: debug condition
   debug:
     msg: "has test_centro15 tag"
-  tags:
-    - test_centro15
+  when: test_centro15
 
 - name: Mostrar tags con las que se ha llamado este rol
   debug:
