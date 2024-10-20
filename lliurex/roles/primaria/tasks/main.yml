@@ -9,6 +9,10 @@
   command: cat /etc/tipo
   register: tipo
 
+- name: Debug pkglist_primara
+  debug:
+    msg: "{{ pkglist_primaria }}"
+
 - name: Install list of packages
   include_tasks: install_pkgs.yml
   loop: "{{ pkglist_primaria }}"
