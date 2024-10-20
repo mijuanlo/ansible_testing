@@ -29,3 +29,9 @@
     content: |
       jaja
   when: (centro is defined) and (tipo is defined) and ( centro.stdout == 'numero15') and ( tipo.stdout == 'secundaria')
+
+- name: debug condition
+  debug:
+    msg: "has test_centro15 tag"
+  tags:
+    - test_centro15
