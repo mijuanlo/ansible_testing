@@ -35,3 +35,9 @@
     msg: "has test_centro15 tag"
   tags:
     - test_centro15
+
+- name: Mostrar tags con las que se ha llamado este rol
+  debug:
+    msg: "Este rol ha sido llamado con las siguientes tags: {{ ansible_run_tags | join(', ') }}"
+  tags:
+    - always
