@@ -13,6 +13,10 @@
   debug:
     msg: "{{ pkglist_primaria }}"
 
+- name: Debug testeo
+  debug:
+    msg: "{{ testeo }}"
+
 - name: Install list of packages
   include_tasks: install_pkgs.yml
   loop: "{{ pkglist_primaria }}"
