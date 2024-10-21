@@ -1,0 +1,3 @@
+- name: debug centro 1515-profesor
+  debug:
+    msg: "(rol lliurex) centro 1515-profesor"
