@@ -10,22 +10,9 @@
     command: lliurex-version -f
     register: llx_flavour
 
-  - name: Setup facts for version
+  - name: Setup facts for version,flavour
     ansible.builtin.set_fact:
       llxversion: "{{ llx_version.stdout }}"
-
-  - name: Setup facts for flavour
-    ansible.builtin.set_fact:
-      llxflavour: "{{ llx_flavour.stdout }}"
-
-- name: Generate greeting and store result
-  demo_hello: 
-    name: "{{ friend_name }}" 
-  register: demo_greeting 
-
-- name: dump output
-  debug: 
-    msg: "{{ demo_greeting }}\n"
 
 - name: "Ansible | List all known variables and facts"
   debug:

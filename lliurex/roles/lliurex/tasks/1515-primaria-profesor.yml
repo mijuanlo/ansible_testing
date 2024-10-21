@@ -1,0 +1,3 @@
+- name: debug centro 15-primaria-profesor
+  debug:
+    msg: "centro 15-primaria-profesor"
