@@ -1,0 +1,3 @@
+- name: debug primaria-adi
+  debug:
+    msg: "(rol lliurex) primaria-adi"
