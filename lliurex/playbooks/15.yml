@@ -1,11 +1,31 @@
 ---
 - hosts: localhost
-  pre_tasks:
-    - shell: hostname
+  tasks:
+    - shell: uname -a
+      register: uname
+    - name: show uname
+      debug: var=uname.stdout
+    - shell: id
+      register: id
+    - name: show id
+      debug: var=id.stdout
+    
+
+- hosts: all
+  tasks:
+    - shell: uname -a
+      register: uname
+    - name: debug uname
+      debug: var=uname.stdout
+    - shell: id
+      register: id
+    - name: show id
+      debug: var=id.stdout
+
     - name: Gather /etc/centro
       command: cat /etc/centro
       register: centro_cmd
-  tasks:
     - name: debug centro 15
       debug:
-        msg: "centro {{ centro_cmd }}"
+        msg: "centro {{ centro_cmd.stdout }}"
+
