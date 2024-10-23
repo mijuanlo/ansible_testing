@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
     - name: debug centro 15-primaria-alumno
       debug:
