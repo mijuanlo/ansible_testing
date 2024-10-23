@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: debug centro 15
+      debug:
+        msg: "centro {{ centro }}"

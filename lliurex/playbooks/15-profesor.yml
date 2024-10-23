@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: debug centro 15-profesor
+      debug:
+        msg: "centro 15-profesor"

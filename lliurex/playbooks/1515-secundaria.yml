@@ -1,3 +1,0 @@
-- name: debug centro 15-secundaria
-  debug:
-    msg: "centro 15-secundaria"

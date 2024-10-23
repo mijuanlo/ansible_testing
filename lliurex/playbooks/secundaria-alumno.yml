@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: debug secundaria-alumno
+      debug:
+        msg: "secundaria-alumno"
