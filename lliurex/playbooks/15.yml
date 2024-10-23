@@ -4,9 +4,7 @@
     - name: Gather /etc/centro
       command: cat /etc/centro
       register: centro_cmd
-  vars:
-    centro: {{ centro_cmd.stdout }}
   tasks:
     - name: debug centro 15
       debug:
-        msg: "centro {{ centro }}"
+        msg: "centro {{ centro_cmd }}"
