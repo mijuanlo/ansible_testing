@@ -1,5 +1,11 @@
 ---
 - hosts: localhost
+  pre_tasks:
+    - name: Gather /etc/centro
+      command: cat /etc/centro
+      register: centro_cmd
+  vars:
+    centro: {{ centro_cmd.stdout }}
   tasks:
     - name: debug centro 15
       debug:
