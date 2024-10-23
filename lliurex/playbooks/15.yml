@@ -1,11 +1,11 @@
 ---
 - hosts: localhost
   pre_tasks:
+    - shell: hostname
     - name: Gather /etc/centro
       command: cat /etc/centro
       register: centro_cmd
   tasks:
-    - shell: hostname
     - name: debug centro 15
       debug:
         msg: "centro {{ centro_cmd }}"
