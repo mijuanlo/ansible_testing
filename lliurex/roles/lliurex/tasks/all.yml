@@ -1,0 +1,4 @@
+- name: Update apt
+  apt:
+    upgrade: "no"
+    update_cache: yes
