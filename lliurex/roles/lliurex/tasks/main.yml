@@ -1,5 +1,8 @@
 ---
 # tasks file for lliurex
+- name: Default action
+  debug:
+    msg: "Online host!"
 
 - name: Run all default actions
   include_role: 
