@@ -1,20 +1,25 @@
 ---
 # tasks file for lliurex
 
-- block:
-  - name: Gather lliurex version
-    command: lliurex-version -n
-    register: llx_version
+- name: Run all default actions
+  include_role: 
+    name: llx.lliurex.lliurex
+    tasks_from: facts
 
-  - name: Gather lliurex flavour
-    command: lliurex-version -f
-    register: llx_flavour
-
-  - name: Setup facts for version,flavour
-    ansible.builtin.set_fact:
-      llxversion: "{{ llx_version.stdout }}"
-      llxflavour: "{{ llx_flavour.stdout }}"
-
+# - block:
+#   - name: Gather lliurex version
+#     command: lliurex-version -n
+#     register: llx_version
+# 
+#   - name: Gather lliurex flavour
+#     command: lliurex-version -f
+#     register: llx_flavour
+# 
+#   - name: Setup facts for version,flavour
+#     ansible.builtin.set_fact:
+#       llxversion: "{{ llx_version.stdout }}"
+#       llxflavour: "{{ llx_flavour.stdout }}"
+ 
 #- name: "Ansible | List all known variables and facts"
 #  debug:
 #    var: hostvars[inventory_hostname]
