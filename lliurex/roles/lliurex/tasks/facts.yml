@@ -9,16 +9,16 @@
   command: lliurex-version -f
   register: llx_flavour
 
-- name: Gather /etc/mycenter
-  command: cat /etc/mycenter
+- name: Gather /etc/school
+  command: cat /etc/school
   register: centro_cmd
 
-- name: Gather /etc/mykind
-  command: cat /etc/mykind
+- name: Gather /etc/type
+  command: cat /etc/type
   register: tipo_cmd
 
-- name: Gather /etc/mylevel
-  command: cat /etc/mylevel
+- name: Gather /etc/level
+  command: cat /etc/level
   register: nivel_cmd
 
 - name: Setup facts
