@@ -1,3 +1,3 @@
-- name: debug centro 15-primaria-profesor
+- name: debug centro 15-pri-server
   debug:
-    msg: "(rol lliurex) centro 15-primaria-profesor"
+    msg: "(rol lliurex) centro 15-pri-server"

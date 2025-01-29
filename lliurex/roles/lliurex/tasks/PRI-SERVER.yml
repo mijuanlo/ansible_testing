@@ -1,3 +1,3 @@
-- name: debug primaria-profesor
+- name: debug pri-server
   debug:
-    msg: "(rol lliurex) primaria-profesor"
+    msg: "(rol lliurex) pri-server"
