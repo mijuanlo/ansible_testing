@@ -1,3 +1,6 @@
+- name: debug all
+  debug:
+    msg: "(rol lliurex) all"
 - name: Update apt
   apt:
     upgrade: "no"
