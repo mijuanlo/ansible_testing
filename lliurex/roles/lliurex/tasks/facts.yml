@@ -1,6 +1,11 @@
 ---
 # tasks file for lliurex
 
+- name: Gather Timestamp
+  command: date +%s
+  register: online_time
+  ignore_errors: yes
+
 - name: Gather lliurex version
   command: lliurex-version -n
   register: llx_version
@@ -33,4 +38,5 @@
     centro: "{{ centro_cmd.stdout }}"
     tipo: "{{ tipo_cmd.stdout }}"
     nivel: "{{ nivel_cmd.stdout }}"
+    online_time: "{{ online_time.stdout }}"
   ignore_errors: yes
